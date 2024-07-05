@@ -1,0 +1,24 @@
+-in:file:s complex.pdb 
+-in:file:native native.pdb
+ 
+-in:membrane 
+-mp:lipids:composition POPE
+-mp:lipids:temperature 35.0
+-mp:lipids:has_pore 0
+
+-score:weights franklin2019
+
+-mp:setup:spanfiles complex.span 
+-mp:setup:span1 chainA.span
+-mp:setup:span2 chainB.span
+-mp:lipids:has_pore true
+@partners
+
+-ensemble1 1ensemble.txt 
+-ensemble2 2ensemble.txt   
+-nstruct 1 
+-ignore_zero_occupancy false 
+-ex1 
+-ex2aro 
+-out:suffix _ppk
+-overwrite

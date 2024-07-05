@@ -1,0 +1,33 @@
+-in:file:s complex.pdb
+-in:file:native native.pdb
+
+-nstruct 8000
+-mp:setup:spanfiles complex.span
+-in:membrane
+-mp:lipids:has_pore 0
+-mp:lipids:composition POPE
+-mp:lipids:temperature 35.0
+
+-dock_pert 3 8
+-ensemble1 1ensemble.txt.ensemble
+-ensemble2 2ensemble.txt.ensemble
+@partners 
+
+-docking_low_res_score motif_dock_score
+-mh:path:scores_BB_BB /home/rsamant2/scratch16-jgray21/rsamant2/Rosetta/main/database/additional_protocol_data/motif_dock/xh_16_
+-mh:score:use_ss1 false
+-mh:score:use_ss2 false
+-mh:score:use_aa1 true
+-mh:score:use_aa2 true
+
+-ignore_zero_occupancy false
+-ex1
+-ex2aro
+-score:weights franklin2023
+-score:pack_weights franklin2023
+
+-out:path:all highres_output
+-out:pdb_gz
+-out:file:scorefile updated_docking_fa23.sc
+-out:suffix _fa23
+-run:multiple_processes_writing_to_one_directory
