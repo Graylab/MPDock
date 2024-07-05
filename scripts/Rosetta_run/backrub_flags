@@ -1,0 +1,8 @@
+-in:file:s ligand_A.pdb
+-nstruct 30
+-backrub:ntrials 20000
+-backrub:mc_kt 0.6
+-out:path:pdb ./
+-out:prefix br_
+-out:pdb_gz
+-out:path:score ./

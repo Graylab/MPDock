@@ -1,0 +1,6 @@
+-in:file:s ligand_A.pdb
+-nstruct 30
+-relax:fast
+-out:pdb_gz
+-out:prefix relax_
+-out:path:all ./

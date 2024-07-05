@@ -1,0 +1,5 @@
+-in:file:s ligand_A.pdb
+-nstruct 2
+-parser:protocol nma.xml
+-out:prefix nma_
+-out:path:all ./
